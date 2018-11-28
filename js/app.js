@@ -1,10 +1,19 @@
 const tomElement = document.querySelector('.tom'),
-	clicksElement = document.querySelector('.clicks');
+	tomClickElement = document.querySelector('.tom-click'),
+	oggyElement = document.querySelector('.oggy'),
+	oggyClickElement = document.querySelector('.oggy-click');
 
-let clickCounter = 0;
+let tomClickCounter = 0,
+	oggyClickCounter = 0;
 
 tomElement.addEventListener('click', () => {
-	clickCounter += 1;
+	tomClickCounter += 1;
 
-	clicksElement.innerText = clickCounter;
+	tomClickElement.innerText = tomClickCounter;
+});
+
+oggyElement.addEventListener('click', () => {
+	oggyClickCounter += 1;
+
+	oggyClickElement.innerText = oggyClickCounter;
 });
